@@ -1,0 +1,26 @@
+Package: CrobustaDA
+Title: Differential accessibility pipeline for Ciona robusta.
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Keira",
+           family = "Wiechecki",
+           role = c("aut", "cre"),
+           email = "kaw504@nyu.edu",
+           comment = c(ORCID = "0000-0003-0572-6284"))
+Description: A pipeline for computing differential accessibility of individual accessible elements.
+License: `use_gpl3_license()`
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Depends: 
+    R (>= 3.3)
+Imports:
+    BSgenome.Crobusta.HT.KY,
+    dirfns,
+    peakToGene,
+    RSQLite
+Recommends: CrobustaTFs
+LinkingTo: Rcpp, RcppArmadillo
+SystemRequirements: C++11
+release_date: 2020
