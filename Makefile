@@ -1,10 +1,6 @@
-GFF = HT.Gene.gff
+GFF = HT.Gene.gff3
 ZIP = HT.KYGene.gff3.zip
 URL = http://ghost.zool.kyoto-u.ac.jp/datas/$(ZIP)
-
-install: 
-	Rscript -e "devtools::document()"
-	R CMD INSTALL .
 
 data/atacCiona.db: data data-raw/$(GFF)
 	Rscript data-raw/writeDB.R
@@ -17,6 +13,10 @@ data-raw/$(GFF): data
 
 data:
 	mkdir -p data
+
+install: 
+	Rscript -e "devtools::document()"
+	R CMD INSTALL .
 
 clean:
 	rm -f $(ZIP)

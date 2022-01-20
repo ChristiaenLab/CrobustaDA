@@ -48,6 +48,7 @@ tsc <- GRanges(
 # annotate peaks
 peakome <- import('data-raw/accessomeKY.bed')
 peakome <- peakome[width(peakome)>50]
+names(peakome) <- peakome$name
 
 # promoterAnn <- findOverlaps(peakome,htky$promoter)
 
